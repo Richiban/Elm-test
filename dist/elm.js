@@ -1,6 +1,4 @@
-<!DOCTYPE HTML>
-<html><head><meta charset="UTF-8"><title>Main</title><style>html,head,body { padding:0; margin:0; }
-body { font-family: calibri, helvetica, arial, sans-serif; }</style><script type="text/javascript">
+
 (function() {
 'use strict';
 
@@ -136,6 +134,7 @@ function A9(fun, a, b, c, d, e, f, g, h, i)
     ? fun.func(a, b, c, d, e, f, g, h, i)
     : fun(a)(b)(c)(d)(e)(f)(g)(h)(i);
 }
+
 //import Native.List //
 
 var _elm_lang$core$Native_Array = function() {
@@ -1102,7 +1101,8 @@ return {
 	fromJSArray: fromJSArray
 };
 
-}();//import Native.Utils //
+}();
+//import Native.Utils //
 
 var _elm_lang$core$Native_Basics = function() {
 
@@ -1242,7 +1242,8 @@ return {
 	isInfinite: isInfinite
 };
 
-}();//import //
+}();
+//import //
 
 var _elm_lang$core$Native_Utils = function() {
 
@@ -1729,7 +1730,8 @@ return {
 	toString: toString
 };
 
-}();var _elm_lang$core$Basics$never = function (_p0) {
+}();
+var _elm_lang$core$Basics$never = function (_p0) {
 	never:
 	while (true) {
 		var _p1 = _p0;
@@ -1854,6 +1856,7 @@ var _elm_lang$core$Basics$LT = {ctor: 'LT'};
 var _elm_lang$core$Basics$JustOneMore = function (a) {
 	return {ctor: 'JustOneMore', _0: a};
 };
+
 var _elm_lang$core$Maybe$withDefault = F2(
 	function ($default, maybe) {
 		var _p0 = maybe;
@@ -1926,6 +1929,7 @@ var _elm_lang$core$Maybe$map5 = F6(
 			return _elm_lang$core$Maybe$Nothing;
 		}
 	});
+
 //import Native.Utils //
 
 var _elm_lang$core$Native_List = function() {
@@ -2062,7 +2066,8 @@ return {
 	sortWith: F2(sortWith)
 };
 
-}();var _elm_lang$core$List$sortWith = _elm_lang$core$Native_List.sortWith;
+}();
+var _elm_lang$core$List$sortWith = _elm_lang$core$Native_List.sortWith;
 var _elm_lang$core$List$sortBy = _elm_lang$core$Native_List.sortBy;
 var _elm_lang$core$List$sort = function (xs) {
 	return A2(_elm_lang$core$List$sortBy, _elm_lang$core$Basics$identity, xs);
@@ -2614,6 +2619,7 @@ var _elm_lang$core$List$indexedMap = F2(
 				_elm_lang$core$List$length(xs) - 1),
 			xs);
 	});
+
 var _elm_lang$core$Array$append = _elm_lang$core$Native_Array.append;
 var _elm_lang$core$Array$length = _elm_lang$core$Native_Array.length;
 var _elm_lang$core$Array$isEmpty = function (array) {
@@ -2668,6 +2674,7 @@ var _elm_lang$core$Array$repeat = F2(
 			_elm_lang$core$Basics$always(e));
 	});
 var _elm_lang$core$Array$Array = {ctor: 'Array'};
+
 //import Native.Utils //
 
 var _elm_lang$core$Native_Char = function() {
@@ -2681,7 +2688,8 @@ return {
 	toLocaleLower: function(c) { return _elm_lang$core$Native_Utils.chr(c.toLocaleLowerCase()); }
 };
 
-}();var _elm_lang$core$Char$fromCode = _elm_lang$core$Native_Char.fromCode;
+}();
+var _elm_lang$core$Char$fromCode = _elm_lang$core$Native_Char.fromCode;
 var _elm_lang$core$Char$toCode = _elm_lang$core$Native_Char.toCode;
 var _elm_lang$core$Char$toLocaleLower = _elm_lang$core$Native_Char.toLocaleLower;
 var _elm_lang$core$Char$toLocaleUpper = _elm_lang$core$Native_Char.toLocaleUpper;
@@ -2723,6 +2731,7 @@ var _elm_lang$core$Char$isHexDigit = function ($char) {
 		_elm_lang$core$Native_Utils.chr('F'),
 		$char));
 };
+
 //import Native.Utils //
 
 var _elm_lang$core$Native_Scheduler = function() {
@@ -3003,7 +3012,8 @@ return {
 	rawSend: rawSend
 };
 
-}();//import //
+}();
+//import //
 
 var _elm_lang$core$Native_Platform = function() {
 
@@ -3562,6 +3572,7 @@ return {
 };
 
 }();
+
 var _elm_lang$core$Platform_Cmd$batch = _elm_lang$core$Native_Platform.batch;
 var _elm_lang$core$Platform_Cmd$none = _elm_lang$core$Platform_Cmd$batch(
 	{ctor: '[]'});
@@ -3576,11 +3587,13 @@ _elm_lang$core$Platform_Cmd_ops['!'] = F2(
 	});
 var _elm_lang$core$Platform_Cmd$map = _elm_lang$core$Native_Platform.map;
 var _elm_lang$core$Platform_Cmd$Cmd = {ctor: 'Cmd'};
+
 var _elm_lang$core$Platform_Sub$batch = _elm_lang$core$Native_Platform.batch;
 var _elm_lang$core$Platform_Sub$none = _elm_lang$core$Platform_Sub$batch(
 	{ctor: '[]'});
 var _elm_lang$core$Platform_Sub$map = _elm_lang$core$Native_Platform.map;
 var _elm_lang$core$Platform_Sub$Sub = {ctor: 'Sub'};
+
 var _elm_lang$core$Platform$hack = _elm_lang$core$Native_Scheduler.succeed;
 var _elm_lang$core$Platform$sendToSelf = _elm_lang$core$Native_Platform.sendToSelf;
 var _elm_lang$core$Platform$sendToApp = _elm_lang$core$Native_Platform.sendToApp;
@@ -3590,6 +3603,7 @@ var _elm_lang$core$Platform$Program = {ctor: 'Program'};
 var _elm_lang$core$Platform$Task = {ctor: 'Task'};
 var _elm_lang$core$Platform$ProcessId = {ctor: 'ProcessId'};
 var _elm_lang$core$Platform$Router = {ctor: 'Router'};
+
 var _elm_lang$core$Result$toMaybe = function (result) {
 	var _p0 = result;
 	if (_p0.ctor === 'Ok') {
@@ -3731,6 +3745,7 @@ var _elm_lang$core$Result$fromMaybe = F2(
 			return _elm_lang$core$Result$Err(err);
 		}
 	});
+
 //import Native.Utils //
 
 var _elm_lang$core$Native_Debug = function() {
@@ -3760,7 +3775,8 @@ return {
 	log: F2(log)
 };
 
-}();//import Maybe, Native.List, Native.Utils, Result //
+}();
+//import Maybe, Native.List, Native.Utils, Result //
 
 var _elm_lang$core$Native_String = function() {
 
@@ -4099,6 +4115,7 @@ return {
 };
 
 }();
+
 var _elm_lang$core$String$fromList = _elm_lang$core$Native_String.fromList;
 var _elm_lang$core$String$toList = _elm_lang$core$Native_String.toList;
 var _elm_lang$core$String$toFloat = _elm_lang$core$Native_String.toFloat;
@@ -4142,6 +4159,7 @@ var _elm_lang$core$String$fromChar = function ($char) {
 	return A2(_elm_lang$core$String$cons, $char, '');
 };
 var _elm_lang$core$String$isEmpty = _elm_lang$core$Native_String.isEmpty;
+
 var _elm_lang$core$Dict$foldr = F3(
 	function (f, acc, t) {
 		foldr:
@@ -5058,8 +5076,10 @@ var _elm_lang$core$Dict$diff = F2(
 			t1,
 			t2);
 	});
+
 var _elm_lang$core$Debug$crash = _elm_lang$core$Native_Debug.crash;
 var _elm_lang$core$Debug$log = _elm_lang$core$Native_Debug.log;
+
 //import Maybe, Native.Array, Native.List, Native.Utils, Result //
 
 var _elm_lang$core$Native_Json = function() {
@@ -5635,6 +5655,7 @@ return {
 };
 
 }();
+
 var _elm_lang$core$Json_Encode$list = _elm_lang$core$Native_Json.encodeList;
 var _elm_lang$core$Json_Encode$array = _elm_lang$core$Native_Json.encodeArray;
 var _elm_lang$core$Json_Encode$object = _elm_lang$core$Native_Json.encodeObject;
@@ -5645,6 +5666,7 @@ var _elm_lang$core$Json_Encode$int = _elm_lang$core$Native_Json.identity;
 var _elm_lang$core$Json_Encode$string = _elm_lang$core$Native_Json.identity;
 var _elm_lang$core$Json_Encode$encode = _elm_lang$core$Native_Json.encode;
 var _elm_lang$core$Json_Encode$Value = {ctor: 'Value'};
+
 var _elm_lang$core$Json_Decode$null = _elm_lang$core$Native_Json.decodeNull;
 var _elm_lang$core$Json_Decode$value = _elm_lang$core$Native_Json.decodePrimitive('value');
 var _elm_lang$core$Json_Decode$andThen = _elm_lang$core$Native_Json.andThen;
@@ -5707,6 +5729,7 @@ var _elm_lang$core$Json_Decode$int = _elm_lang$core$Native_Json.decodePrimitive(
 var _elm_lang$core$Json_Decode$bool = _elm_lang$core$Native_Json.decodePrimitive('bool');
 var _elm_lang$core$Json_Decode$string = _elm_lang$core$Native_Json.decodePrimitive('string');
 var _elm_lang$core$Json_Decode$Decoder = {ctor: 'Decoder'};
+
 var _elm_lang$core$Tuple$mapSecond = F2(
 	function (func, _p0) {
 		var _p1 = _p0;
@@ -5733,6 +5756,7 @@ var _elm_lang$core$Tuple$first = function (_p6) {
 	var _p7 = _p6;
 	return _p7._0;
 };
+
 var _elm_lang$virtual_dom$VirtualDom_Debug$wrap;
 var _elm_lang$virtual_dom$VirtualDom_Debug$wrapWithFlags;
 
@@ -7614,6 +7638,7 @@ return {
 };
 
 }();
+
 var _elm_lang$virtual_dom$VirtualDom$programWithFlags = function (impl) {
 	return A2(_elm_lang$virtual_dom$Native_VirtualDom.programWithFlags, _elm_lang$virtual_dom$VirtualDom_Debug$wrapWithFlags, impl);
 };
@@ -7644,6 +7669,7 @@ var _elm_lang$virtual_dom$VirtualDom$Options = F2(
 	});
 var _elm_lang$virtual_dom$VirtualDom$Node = {ctor: 'Node'};
 var _elm_lang$virtual_dom$VirtualDom$Property = {ctor: 'Property'};
+
 var _elm_lang$html$Html$programWithFlags = _elm_lang$virtual_dom$VirtualDom$programWithFlags;
 var _elm_lang$html$Html$program = _elm_lang$virtual_dom$VirtualDom$program;
 var _elm_lang$html$Html$beginnerProgram = function (_p0) {
@@ -7768,6 +7794,7 @@ var _elm_lang$html$Html$details = _elm_lang$html$Html$node('details');
 var _elm_lang$html$Html$summary = _elm_lang$html$Html$node('summary');
 var _elm_lang$html$Html$menuitem = _elm_lang$html$Html$node('menuitem');
 var _elm_lang$html$Html$menu = _elm_lang$html$Html$node('menu');
+
 var _elm_lang$html$Html_Attributes$map = _elm_lang$virtual_dom$VirtualDom$mapProperty;
 var _elm_lang$html$Html_Attributes$attribute = _elm_lang$virtual_dom$VirtualDom$attribute;
 var _elm_lang$html$Html_Attributes$contextmenu = function (value) {
@@ -8117,6 +8144,7 @@ var _elm_lang$html$Html_Attributes$classList = function (list) {
 				A2(_elm_lang$core$List$filter, _elm_lang$core$Tuple$second, list))));
 };
 var _elm_lang$html$Html_Attributes$style = _elm_lang$virtual_dom$VirtualDom$style;
+
 var _elm_lang$html$Html_Events$keyCode = A2(_elm_lang$core$Json_Decode$field, 'keyCode', _elm_lang$core$Json_Decode$int);
 var _elm_lang$html$Html_Events$targetChecked = A2(
 	_elm_lang$core$Json_Decode$at,
@@ -8231,6 +8259,7 @@ var _elm_lang$html$Html_Events$Options = F2(
 	function (a, b) {
 		return {stopPropagation: a, preventDefault: b};
 	});
+
 var _user$project$Models$BagItem = F4(
 	function (a, b, c, d) {
 		return {id: a, productId: b, name: c, price: d};
@@ -8239,9 +8268,13 @@ var _user$project$Models$Product = F3(
 	function (a, b, c) {
 		return {id: a, name: b, price: c};
 	});
-var _user$project$Models$Model = F3(
-	function (a, b, c) {
-		return {products: a, bag: b, newProduct: c};
+var _user$project$Models$Model = F4(
+	function (a, b, c, d) {
+		return {products: a, bag: b, newProduct: c, validationErrors: d};
+	});
+var _user$project$Models$NewProductModel = F2(
+	function (a, b) {
+		return {name: a, price: b};
 	});
 var _user$project$Models$ProductId = function (a) {
 	return {ctor: 'ProductId', _0: a};
@@ -8270,7 +8303,7 @@ var _user$project$Models$allProducts = {
 			_1: {
 				ctor: '::',
 				_0: {
-					id: _user$project$Models$ProductId(3248),
+					id: _user$project$Models$ProductId(3241),
 					name: 'Blue pants',
 					price: 100
 				},
@@ -8282,8 +8315,8 @@ var _user$project$Models$allProducts = {
 var _user$project$Models$BagItemId = function (a) {
 	return {ctor: 'BagItemId', _0: a};
 };
-var _user$project$Models$UpdateNewProductName = function (a) {
-	return {ctor: 'UpdateNewProductName', _0: a};
+var _user$project$Models$EditNewProduct = function (a) {
+	return {ctor: 'EditNewProduct', _0: a};
 };
 var _user$project$Models$CommitNewProduct = function (a) {
 	return {ctor: 'CommitNewProduct', _0: a};
@@ -8293,6 +8326,44 @@ var _user$project$Models$RemoveFromBag = function (a) {
 };
 var _user$project$Models$AddToBag = function (a) {
 	return {ctor: 'AddToBag', _0: a};
+};
+var _user$project$Models$UpdateNewProductPrice = function (a) {
+	return {ctor: 'UpdateNewProductPrice', _0: a};
+};
+var _user$project$Models$UpdateNewProductName = function (a) {
+	return {ctor: 'UpdateNewProductName', _0: a};
+};
+
+var _user$project$Views$validationView = function (errorMessages) {
+	return A2(
+		_elm_lang$html$Html$div,
+		{ctor: '[]'},
+		A2(
+			_elm_lang$core$List$map,
+			function (msg) {
+				return A2(
+					_elm_lang$html$Html$div,
+					{
+						ctor: '::',
+						_0: _elm_lang$html$Html_Attributes$style(
+							{
+								ctor: '::',
+								_0: {ctor: '_Tuple2', _0: 'background-color', _1: 'pink'},
+								_1: {
+									ctor: '::',
+									_0: {ctor: '_Tuple2', _0: 'border', _1: '1px solid red'},
+									_1: {ctor: '[]'}
+								}
+							}),
+						_1: {ctor: '[]'}
+					},
+					{
+						ctor: '::',
+						_0: _elm_lang$html$Html$text(msg),
+						_1: {ctor: '[]'}
+					});
+			},
+			errorMessages));
 };
 var _user$project$Views$inputView = function (newProduct) {
 	return A2(
@@ -8317,12 +8388,19 @@ var _user$project$Views$inputView = function (newProduct) {
 						_0: _elm_lang$html$Html_Attributes$type_('text'),
 						_1: {
 							ctor: '::',
-							_0: _elm_lang$html$Html_Attributes$placeholder('Id'),
+							_0: _elm_lang$html$Html_Attributes$placeholder('Name'),
 							_1: {
 								ctor: '::',
-								_0: _elm_lang$html$Html_Attributes$value(
-									_elm_lang$core$Basics$toString(newProduct.id)),
-								_1: {ctor: '[]'}
+								_0: _elm_lang$html$Html_Events$onInput(
+									function (_p0) {
+										return _user$project$Models$EditNewProduct(
+											_user$project$Models$UpdateNewProductName(_p0));
+									}),
+								_1: {
+									ctor: '::',
+									_0: _elm_lang$html$Html_Attributes$value(newProduct.name),
+									_1: {ctor: '[]'}
+								}
 							}
 						}
 					},
@@ -8336,13 +8414,17 @@ var _user$project$Views$inputView = function (newProduct) {
 							_0: _elm_lang$html$Html_Attributes$type_('text'),
 							_1: {
 								ctor: '::',
-								_0: _elm_lang$html$Html_Attributes$placeholder('Name'),
+								_0: _elm_lang$html$Html_Attributes$placeholder('Price'),
 								_1: {
 									ctor: '::',
-									_0: _elm_lang$html$Html_Events$onInput(_user$project$Models$UpdateNewProductName),
+									_0: _elm_lang$html$Html_Attributes$value(newProduct.price),
 									_1: {
 										ctor: '::',
-										_0: _elm_lang$html$Html_Attributes$value(newProduct.name),
+										_0: _elm_lang$html$Html_Events$onInput(
+											function (_p1) {
+												return _user$project$Models$EditNewProduct(
+													_user$project$Models$UpdateNewProductPrice(_p1));
+											}),
 										_1: {ctor: '[]'}
 									}
 								}
@@ -8352,39 +8434,19 @@ var _user$project$Views$inputView = function (newProduct) {
 					_1: {
 						ctor: '::',
 						_0: A2(
-							_elm_lang$html$Html$input,
+							_elm_lang$html$Html$button,
 							{
 								ctor: '::',
-								_0: _elm_lang$html$Html_Attributes$type_('text'),
-								_1: {
-									ctor: '::',
-									_0: _elm_lang$html$Html_Attributes$placeholder('Price'),
-									_1: {
-										ctor: '::',
-										_0: _elm_lang$html$Html_Attributes$value(
-											_elm_lang$core$Basics$toString(newProduct.price)),
-										_1: {ctor: '[]'}
-									}
-								}
+								_0: _elm_lang$html$Html_Events$onClick(
+									_user$project$Models$CommitNewProduct(newProduct)),
+								_1: {ctor: '[]'}
 							},
-							{ctor: '[]'}),
-						_1: {
-							ctor: '::',
-							_0: A2(
-								_elm_lang$html$Html$button,
-								{
-									ctor: '::',
-									_0: _elm_lang$html$Html_Events$onClick(
-										_user$project$Models$CommitNewProduct(newProduct)),
-									_1: {ctor: '[]'}
-								},
-								{
-									ctor: '::',
-									_0: _elm_lang$html$Html$text('Ok'),
-									_1: {ctor: '[]'}
-								}),
-							_1: {ctor: '[]'}
-						}
+							{
+								ctor: '::',
+								_0: _elm_lang$html$Html$text('Ok'),
+								_1: {ctor: '[]'}
+							}),
+						_1: {ctor: '[]'}
 					}
 				}
 			}
@@ -8469,7 +8531,14 @@ var _user$project$Views$productView = function (product) {
 				{ctor: '[]'},
 				{
 					ctor: '::',
-					_0: _elm_lang$html$Html$text(product.name),
+					_0: _elm_lang$html$Html$text(
+						A2(
+							_elm_lang$core$Basics_ops['++'],
+							'(',
+							A2(
+								_elm_lang$core$Basics_ops['++'],
+								_elm_lang$core$Basics$toString(product.id),
+								')'))),
 					_1: {ctor: '[]'}
 				}),
 			_1: {
@@ -8479,26 +8548,53 @@ var _user$project$Views$productView = function (product) {
 					{ctor: '[]'},
 					{
 						ctor: '::',
-						_0: A2(
-							_elm_lang$html$Html$input,
-							{
-								ctor: '::',
-								_0: _elm_lang$html$Html_Attributes$type_('button'),
-								_1: {
-									ctor: '::',
-									_0: _elm_lang$html$Html_Attributes$value('Add to bag'),
-									_1: {
-										ctor: '::',
-										_0: _elm_lang$html$Html_Events$onClick(
-											_user$project$Models$AddToBag(product)),
-										_1: {ctor: '[]'}
-									}
-								}
-							},
-							{ctor: '[]'}),
+						_0: _elm_lang$html$Html$text(product.name),
 						_1: {ctor: '[]'}
 					}),
-				_1: {ctor: '[]'}
+				_1: {
+					ctor: '::',
+					_0: A2(
+						_elm_lang$html$Html$td,
+						{ctor: '[]'},
+						{
+							ctor: '::',
+							_0: _elm_lang$html$Html$text('$'),
+							_1: {
+								ctor: '::',
+								_0: _elm_lang$html$Html$text(
+									_elm_lang$core$Basics$toString(product.price)),
+								_1: {ctor: '[]'}
+							}
+						}),
+					_1: {
+						ctor: '::',
+						_0: A2(
+							_elm_lang$html$Html$td,
+							{ctor: '[]'},
+							{
+								ctor: '::',
+								_0: A2(
+									_elm_lang$html$Html$input,
+									{
+										ctor: '::',
+										_0: _elm_lang$html$Html_Attributes$type_('button'),
+										_1: {
+											ctor: '::',
+											_0: _elm_lang$html$Html_Attributes$value('Add to bag'),
+											_1: {
+												ctor: '::',
+												_0: _elm_lang$html$Html_Events$onClick(
+													_user$project$Models$AddToBag(product)),
+												_1: {ctor: '[]'}
+											}
+										}
+									},
+									{ctor: '[]'}),
+								_1: {ctor: '[]'}
+							}),
+						_1: {ctor: '[]'}
+					}
+				}
 			}
 		});
 };
@@ -8529,7 +8625,11 @@ var _user$project$Views$productListView = function (products) {
 var _user$project$Views$view = function (model) {
 	return A2(
 		_elm_lang$html$Html$div,
-		{ctor: '[]'},
+		{
+			ctor: '::',
+			_0: _elm_lang$html$Html_Attributes$class('container'),
+			_1: {ctor: '[]'}
+		},
 		{
 			ctor: '::',
 			_0: _user$project$Views$productListView(model.products),
@@ -8539,24 +8639,77 @@ var _user$project$Views$view = function (model) {
 				_1: {
 					ctor: '::',
 					_0: _user$project$Views$inputView(model.newProduct),
-					_1: {ctor: '[]'}
+					_1: {
+						ctor: '::',
+						_0: _user$project$Views$validationView(model.validationErrors),
+						_1: {ctor: '[]'}
+					}
 				}
 			}
 		});
 };
+
+var _user$project$Main$validate = function (_p0) {
+	var _p1 = _p0;
+	var _p4 = _p1.name;
+	var priceErrors = function () {
+		var _p2 = _elm_lang$core$String$toFloat(_p1.price);
+		if (_p2.ctor === 'Err') {
+			return _elm_lang$core$Maybe$Just(_p2._0);
+		} else {
+			return _elm_lang$core$Maybe$Nothing;
+		}
+	}();
+	var nameErrors = _elm_lang$core$Native_Utils.eq(_p4, '') ? _elm_lang$core$Maybe$Just('Please give your new product a name') : _elm_lang$core$Maybe$Nothing;
+	var _p3 = A2(
+		_elm_lang$core$List$filterMap,
+		function (x) {
+			return x;
+		},
+		{
+			ctor: '::',
+			_0: nameErrors,
+			_1: {
+				ctor: '::',
+				_0: priceErrors,
+				_1: {ctor: '[]'}
+			}
+		});
+	if (_p3.ctor === '[]') {
+		return _elm_lang$core$Result$Ok(
+			{
+				id: _user$project$Models$ProductId(0),
+				name: _p4,
+				price: 0.1
+			});
+	} else {
+		return _elm_lang$core$Result$Err(_p3);
+	}
+};
+var _user$project$Main$emptyProduct = {name: '', price: ''};
+var _user$project$Main$init = {
+	ctor: '_Tuple2',
+	_0: {
+		products: _user$project$Models$allProducts,
+		bag: {ctor: '[]'},
+		newProduct: _user$project$Main$emptyProduct,
+		validationErrors: {ctor: '[]'}
+	},
+	_1: _elm_lang$core$Platform_Cmd$none
+};
 var _user$project$Main$update = F2(
 	function (msg, model) {
-		var _p0 = msg;
-		switch (_p0.ctor) {
+		var _p5 = msg;
+		switch (_p5.ctor) {
 			case 'AddToBag':
-				var _p1 = _p0._0;
+				var _p6 = _p5._0;
 				var newId = _user$project$Models$BagItemId(
 					_elm_lang$core$List$length(model.bag) + 1);
-				var newBagItem = {id: newId, productId: _p1.id, name: _p1.name, price: _p1.price};
+				var newBagItem = {id: newId, productId: _p6.id, name: _p6.name, price: _p6.price};
 				return A2(
 					_elm_lang$core$List$any,
 					function (bi) {
-						return _elm_lang$core$Native_Utils.eq(bi.productId, _p1.id);
+						return _elm_lang$core$Native_Utils.eq(bi.productId, _p6.id);
 					},
 					model.bag) ? {ctor: '_Tuple2', _0: model, _1: _elm_lang$core$Platform_Cmd$none} : {
 					ctor: '_Tuple2',
@@ -8571,7 +8724,7 @@ var _user$project$Main$update = F2(
 				var newBag = A2(
 					_elm_lang$core$List$filter,
 					function (bi) {
-						return !_elm_lang$core$Native_Utils.eq(bi.id, _p0._0.id);
+						return !_elm_lang$core$Native_Utils.eq(bi.id, _p5._0.id);
 					},
 					model.bag);
 				return {
@@ -8582,55 +8735,68 @@ var _user$project$Main$update = F2(
 					_1: _elm_lang$core$Platform_Cmd$none
 				};
 			case 'CommitNewProduct':
-				return {
-					ctor: '_Tuple2',
-					_0: _elm_lang$core$Native_Utils.update(
-						model,
-						{
-							products: {ctor: '::', _0: _p0._0, _1: model.products}
-						}),
-					_1: _elm_lang$core$Platform_Cmd$none
-				};
+				var _p7 = _user$project$Main$validate(_p5._0);
+				if (_p7.ctor === 'Err') {
+					return {
+						ctor: '_Tuple2',
+						_0: _elm_lang$core$Native_Utils.update(
+							model,
+							{validationErrors: _p7._0}),
+						_1: _elm_lang$core$Platform_Cmd$none
+					};
+				} else {
+					return {
+						ctor: '_Tuple2',
+						_0: _elm_lang$core$Native_Utils.update(
+							model,
+							{
+								products: {ctor: '::', _0: _p7._0, _1: model.products},
+								newProduct: _user$project$Main$emptyProduct
+							}),
+						_1: _elm_lang$core$Platform_Cmd$none
+					};
+				}
 			default:
-				var newProduct = model.newProduct;
-				return {
-					ctor: '_Tuple2',
-					_0: _elm_lang$core$Native_Utils.update(
-						model,
-						{
-							newProduct: _elm_lang$core$Native_Utils.update(
-								newProduct,
-								{name: _p0._0})
-						}),
-					_1: _elm_lang$core$Platform_Cmd$none
-				};
+				var _p8 = _p5._0;
+				if (_p8.ctor === 'UpdateNewProductName') {
+					var newProduct = model.newProduct;
+					return {
+						ctor: '_Tuple2',
+						_0: _elm_lang$core$Native_Utils.update(
+							model,
+							{
+								newProduct: _elm_lang$core$Native_Utils.update(
+									newProduct,
+									{name: _p8._0})
+							}),
+						_1: _elm_lang$core$Platform_Cmd$none
+					};
+				} else {
+					var newProduct = model.newProduct;
+					return {
+						ctor: '_Tuple2',
+						_0: _elm_lang$core$Native_Utils.update(
+							model,
+							{
+								newProduct: _elm_lang$core$Native_Utils.update(
+									newProduct,
+									{price: _p8._0})
+							}),
+						_1: _elm_lang$core$Platform_Cmd$none
+					};
+				}
 		}
 	});
-var _user$project$Main$init = function () {
-	var emptyProduct = {
-		id: _user$project$Models$ProductId(0),
-		name: '',
-		price: 0.0
-	};
-	return {
-		ctor: '_Tuple2',
-		_0: {
-			products: _user$project$Models$allProducts,
-			bag: {ctor: '[]'},
-			newProduct: emptyProduct
-		},
-		_1: _elm_lang$core$Platform_Cmd$none
-	};
-}();
 var _user$project$Main$main = _elm_lang$html$Html$program(
 	{
 		update: _user$project$Main$update,
 		view: _user$project$Views$view,
 		init: _user$project$Main$init,
-		subscriptions: function (_p2) {
+		subscriptions: function (_p9) {
 			return _elm_lang$core$Platform_Sub$none;
 		}
 	})();
+
 var Elm = {};
 Elm['Main'] = Elm['Main'] || {};
 if (typeof _user$project$Main$main !== 'undefined') {
@@ -8666,4 +8832,4 @@ for (var publicModule in Elm)
 }
 
 }).call(this);
-</script></head><body><script type="text/javascript">Elm.Main.fullscreen()</script></body></html>
+
