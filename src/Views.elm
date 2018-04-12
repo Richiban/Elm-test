@@ -6,7 +6,7 @@ import Html.Events exposing (..)
 import Models exposing (..)
 
 
-productView : Product -> Html Msg
+productView : Product -> Html BagMsg
 productView product =
     tr []
         [ td []
@@ -25,7 +25,7 @@ productView product =
         ]
 
 
-productListView : List Product -> Html Msg
+productListView : List Product -> Html BagMsg
 productListView products =
     div []
         [ h2 [] [ text "Products" ]
@@ -33,7 +33,7 @@ productListView products =
         ]
 
 
-bagItemView : { id : BagItemId, name : String, price : Float, productId : ProductId } -> Html Msg
+bagItemView : BagItem -> Html BagMsg
 bagItemView bagItem =
     tr []
         [ td [] [ text bagItem.name ]
@@ -41,7 +41,7 @@ bagItemView bagItem =
         ]
 
 
-bagView : List BagItem -> Html Msg
+bagView : List BagItem -> Html BagMsg
 bagView bag =
     div []
         [ h2 [] [ text "Bag" ]
@@ -85,8 +85,8 @@ validationView errorMessages =
 view : Model -> Html Msg
 view model =
     div [ class "container" ]
-        [ productListView model.products
-        , bagView model.bag
+        [ productListView model.products |> Html.map Bag
+        , bagView model.bag |> Html.map Bag
         , inputView model.newProduct
         , validationView model.validationErrors
         ]

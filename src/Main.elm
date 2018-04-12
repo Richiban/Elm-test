@@ -18,30 +18,32 @@ init =
 validate : NewProductModel -> Result (List String) Product
 validate { name, price } =
     let
-        nameErrors =
+        name1 =
             if name == "" then
-                Just "Please give your new product a name"
+                Err "Please give your new product a name"
             else
-                Nothing
+                Ok name
 
-        priceErrors =
-            case String.toFloat price of
-                Err message ->
-                    Just message
-
-                _ ->
-                    Nothing
+        price1 =
+            String.toFloat price
     in
-        case [ nameErrors, priceErrors ] |> List.filterMap (\x -> x) of
-            [] ->
-                Ok { id = ProductId 0, name = name, price = 0.1 }
+        case (name1, price1) of
+            (Ok name2, Ok price2) ->
+                Ok { id = ProductId 0, name = name2, price = price2 }
 
-            list ->
-                Err list
+            (x, y) ->
+                let getError result =
+                    case result of 
+                        Err msg -> Just msg
+                        Ok _ -> Nothing
+                in
+                    [getError x, getError y]
+                        |> List.filterMap (\a -> a)
+                        |> Err
 
 
-update : Msg -> Model -> ( Model, Cmd a )
-update msg model =
+updateBag : BagMsg -> Model -> (Model, Cmd a)
+updateBag msg model =
     case msg of
         AddToBag p ->
             let
@@ -62,7 +64,14 @@ update msg model =
                     model.bag |> List.filter (\bi -> bi.id /= p.id)
             in
                 ( { model | bag = newBag }, Cmd.none )
+        
 
+
+update : Msg -> Model -> ( Model, Cmd a )
+update msg model =
+    case msg of
+        Bag msg ->
+            updateBag msg model
         CommitNewProduct newProductModel ->
             case validate newProductModel of
                 Err messages ->
@@ -72,6 +81,7 @@ update msg model =
                     ( { model
                         | products = newProduct :: model.products
                         , newProduct = emptyProduct
+                        , validationErrors = []
                       }
                     , Cmd.none
                     )

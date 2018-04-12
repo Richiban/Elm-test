@@ -39,12 +39,15 @@ allProducts =
 
 
 type Msg
+    = Bag BagMsg
+    | CommitNewProduct NewProductModel
+    | EditNewProduct NewProductMsg
+
+type BagMsg
     = AddToBag Product
     | RemoveFromBag BagItem
-    | CommitNewProduct NewProductModel
-    | EditNewProduct EditNewProductMsg
 
 
-type EditNewProductMsg
+type NewProductMsg
     = UpdateNewProductName String
     | UpdateNewProductPrice String
